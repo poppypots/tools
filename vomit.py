@@ -3,6 +3,9 @@ import sys
 from flask_cors import CORS
 from flask import send_file
 import datetime
+from ddtrace.debugging import DynamicInstrumentation
+
+DynamicInstrumentation.enable()
 
 app = Flask(__name__)
 CORS(app)
